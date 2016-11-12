@@ -116,7 +116,7 @@ a,
 a:active,
 a:hover,
 a:focus,
-a:visited, {
+a:visited {
     text-decoration: none;
 }
 
