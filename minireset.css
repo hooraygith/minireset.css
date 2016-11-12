@@ -1,4 +1,5 @@
 /*! minireset.css v0.0.2 | MIT License | github.com/jgthms/minireset.css */
+
 html,
 body,
 p,
@@ -22,8 +23,8 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 h1,
@@ -32,27 +33,40 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: 100%;
-  font-weight: normal;
+    font-size: 100%;
+    font-weight: normal;
 }
 
 ul {
-  list-style: none;
+    list-style: none;
 }
 
 button,
 input,
 select,
 textarea {
-  margin: 0;
+    margin: 0;
 }
 
+
+/* set box-sizing */
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 100px;
+}
+html * {
+    box-sizing: inherit;
+}
+html *:before,
+html *:after {
+    box-sizing: inherit;
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
+/* set font */
+body {
+    line-height: 1.6;
+    font-size: 0.14rem;
+    font-family: -apple-system-font, "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
 }
 
 img,
@@ -60,21 +74,55 @@ embed,
 object,
 audio,
 video {
-  height: auto;
-  max-width: 100%;
+    height: auto;
+    max-width: 100%;
 }
 
 iframe {
-  border: 0;
+    border: 0;
 }
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 td,
 th {
-  padding: 0;
-  text-align: left;
+    padding: 0;
+    text-align: left;
+}
+
+/* disable 3D Touch on ios */
+a,
+img {
+    -webkit-touch-callout: none;
+}
+
+/* disable tap highlight */
+a,
+button {
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+button {
+    outline: 0;
+    border: 1px solid #000;
+    background: transparent;
+}
+
+/* remove text-decoration */
+a,
+a:active,
+a:hover,
+a:focus,
+a:visited, {
+    text-decoration: none;
+}
+
+/* remove outline */
+label,
+input:focus,
+textarea:focus {
+    outline: none;
 }
